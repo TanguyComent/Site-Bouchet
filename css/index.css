@@ -1,0 +1,135 @@
+.wraper{
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.wraper .certification,
+.wraper .marque-deroulant,
+.wraper .categories{
+	border: solid rgba(128, 128, 128, .4);
+	margin: 20px;
+	padding: 20px;
+	position: relative;
+	width: 80%;
+	border-radius: 10px;
+	margin: 40px;
+	background: #fff;
+	padding-top: 50px;
+}
+
+.wraper .categories .item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.wraper .marque-deroulant{
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wraper .categories{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.wraper .categories .image{
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding: 20px;
+}
+
+.wraper .certification .image{
+	width: 200px;
+}
+
+.wraper .certification .image img{
+	width: 100%;
+	height: 100%;
+}
+
+.wraper .certification{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wraper .categories h3{
+	margin: auto;
+	color: goldenrod;
+}
+
+.wraper .categories .image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wraper .certification .title,
+.wraper .marque-deroulant .title,
+.wraper .categories .title{
+	position: absolute;
+	transform: translate(50%, -50%);
+	right: 50%;
+	top: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: darkgoldenrod;
+	z-index: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.wraper .marque-deroulant .caroussel{
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	height: fit-content;
+}
+
+.wraper .marque-deroulant .caroussel .items{
+	height: 100px;
+	width: 100px;
+	object-fit: cover;
+	position: relative;
+}
+
+@media screen and (max-width: 1150px){
+	.wraper .certification,
+	.wraper .marque-deroulant,
+	.wraper .categories{
+		width: 50%;
+		height: fit-content;
+	}
+
+	.wraper .marque-deroulant .caroussel{
+		grid-template-columns: repeat(4, 1fr);
+		width: fit-content;
+	}
+
+	.wraper .categories{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.wraper .marque-deroulant .caroussel{
+		grid-template-columns: 1fr 1fr;
+		width: fit-content;
+	}
+
+	.wraper .certification,
+	.wraper .marque-deroulant,
+	.wraper .categories{
+		width: 70%;
+		height: fit-content;
+	}
+}

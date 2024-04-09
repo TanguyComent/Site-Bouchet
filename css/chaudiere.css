@@ -1,0 +1,116 @@
+@keyframes button-animation {
+    from{
+        display: flex;
+        left: -15px;
+    }
+    80%{
+        left: 90%;
+    }
+    to{
+        left: 80%;
+    }
+    
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.item{
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
+    background: rgb(86, 86, 255);
+    border-radius: 20px;
+    border: solid black 2px;
+    height: 300px;
+}
+
+.item .image{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.txt{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt h2{
+    text-align: center;
+}
+
+.information{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.information button{
+    background: #fff;
+    border: solid #000 2px;
+    padding: 10px 20px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 40px;
+}
+
+.information button h4{
+    position: relative;
+    z-index: 1;
+}
+
+.information button .animation{
+    height: 200%;
+    width: 15px;
+    background: rgb(86, 86, 255);
+    position: absolute;
+    top: -10px;
+    transform: rotate(30deg);
+    z-index: 0;
+    transition: .22s;
+    left: -23px;
+}
+
+.information button:hover{
+    cursor: pointer;
+}
+
+.information button:hover .animation{
+    animation: button-animation 1s;
+    left: 80%;
+}
+
+@media screen and (max-width: 1200px){
+    .item{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 500px;
+        height: auto;
+        grid-auto-flow: dense;
+    }
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

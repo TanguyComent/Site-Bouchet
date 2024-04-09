@@ -1,0 +1,30 @@
+.calendar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.button{
+    margin-top: 40px;
+}
+
+.button button{
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #5656ff;
+    position: relative;
+    transition: .22s;
+    color: #fff;
+}
+
+.button button:hover{
+    box-shadow: inset 0px -50px 35px -10px rgba(34,193,195,1);
+    cursor: pointer;
+}

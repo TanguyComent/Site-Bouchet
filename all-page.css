@@ -1,0 +1,19 @@
+body *, body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: url("image/fond1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	position: relative;
+}
+
+a{
+	color: #000;
+	font-style: none;
+	text-decoration: none;
+}
